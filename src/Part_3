@@ -1,0 +1,45 @@
+                   Part 3 - Design
+1:  Designing a simple REST API for a library system
+
+    crud- create, getAll, getById, delete, update
+    @PostMapping create- create new user / book / order.
+    @GetMapping getAll- get all users / books / orders
+    @GetMapping("/{id}") getById- get user/ book / order by id
+    @PutMapping("/{id}") update- update user/ book / order by id
+    @DeleteMapping("/{id}") delete- delete user/ book / order by id
+
+    user /
+    •	Id*
+    •	Name*
+    •	Address*
+    •	Phone*
+    •	Age
+    •	OrdersId []*
+
+    Order/
+    •	Id*
+    •	UserId (foreign key)*
+    •	BookId (foreign key)*
+    •	BorrowDate*
+    •	LibrrayReturningDate*
+    •	ReturningDate
+
+    Book /
+    •	Id*
+    •	Name*
+    •	Author
+    •	PlaceInLibrrary*
+
+    (* - is required field)
+
+2:  Design departments for an order + payment system
+
+    Customers/
+    Customer information (CRUD) – customer connect between order to payment.
+    Products/
+    Information of the products.
+    Orders/
+    Management the orders, the products, state of the order.
+    Payments/
+    Manage order payments by array of orderId and details about the payment
+    The field orderId in Payment is required.
