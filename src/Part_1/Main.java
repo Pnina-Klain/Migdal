@@ -57,6 +57,7 @@ public class Main {
         frame.add(scrollPane, java.awt.BorderLayout.CENTER);
 
         // Functionality of the buttons
+        // The function create task, add it to the JSON file and view all the tasks
         addTask.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -74,6 +75,8 @@ public class Main {
                 }
             }
         });
+        // The function create task, add it to the JSON file, change one field and update in JSON file
+        // After all view the update list
         updateTask.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -93,6 +96,7 @@ public class Main {
                 }
             }
         });
+        // The function view only the task with id = 1 by the function GetById
         getById.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -108,6 +112,8 @@ public class Main {
 
             }
         });
+
+        // The function view all the tasks list by ListAll function
         listAll.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -123,6 +129,7 @@ public class Main {
                 }
             }
         });
+        // The function delete the task with id = 1 and view the update list 
         delete.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -139,6 +146,7 @@ public class Main {
                 }
             }
         });
+        // The function change the status to DONE in task id = 2 and view the update list
         markDone.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -155,6 +163,7 @@ public class Main {
                 }
             }
         });
+        // The task look after string "r" and view the tasks list with "r" in title or description
         searchByString.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -170,6 +179,7 @@ public class Main {
                 }
             }
         });
+        // The function tasks list sort by status and view the sorted list
         sortByStatus.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
